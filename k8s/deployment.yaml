@@ -25,6 +25,7 @@ spec:
             value: "kubenews"
 
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -59,13 +60,14 @@ spec:
           - name: DB_DATABASE
             value: "kubenews"
           - name: DB_USERNAME
-            value: "kubenews"
+            value: "usrkunenews"
           - name: DB_PASSWORD
-            value: "kubenews"
+            value: "Kub3n3w5#"
           - name: DB_HOST
             value:  "postgre"            
 
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
