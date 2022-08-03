@@ -60,7 +60,7 @@ spec:
           - name: DB_DATABASE
             value: "kubenews"
           - name: DB_USERNAME
-            value: "usrkunenews"
+            value: "usrkube"
           - name: DB_PASSWORD
             value: "Kub3n3w5#"
           - name: DB_HOST
