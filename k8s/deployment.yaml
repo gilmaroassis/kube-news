@@ -18,9 +18,9 @@ spec:
             - containerPort: 5432
           env:
           - name: POSTGRES_PASSWORD
-            value: "kubenews"
+            value: "Kub3n3w5#"
           - name: POSTGRES_USER
-            value: "kubenews"
+            value: "usrkube"
           - name: POSTGRES_DB
             value: "kubenews"
 
