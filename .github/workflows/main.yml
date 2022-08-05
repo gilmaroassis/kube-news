@@ -48,12 +48,5 @@ jobs:
           images:
             gilmaroassis/kube-news:${{github.RUN_NUMBER}}
           manifests: |
-            k8s/deployment.yaml
-            
-          
-          
-          
-      
-    
-    
-  
+            k8s/deployment.yaml        
+                  
