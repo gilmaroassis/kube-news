@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+      app: kube-hello
+    name: kube-hello
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: kube-hello
+  template:
+    metadata:
+      labels:
+        app: kube-hello
+    spec:
+      containers:
+        - name: kube-hello
+          image: gilmaroassis/kube-hello:latest
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: kube-hello
+  name: service-kube-hello
+spec:
+  selector:
+    app: kube-hello
+  ports:
+  - nodePort: 30000
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
