@@ -30,8 +30,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            gilmaroassis/kube-news:lastest
-            gilmaroassis/kube-news:${{github.RUN_NUMBER}}
+            gilmaroassis/kubehello:lastest
+            gilmaroassis/kubehello:${{github.RUN_NUMBER}}
   CD:
     runs-on: ubuntu-latest
     needs: [CI]
@@ -46,7 +46,7 @@ jobs:
         uses: Azure/k8s-deploy@v4.3
         with:
           images:
-            gilmaroassis/kube-news:${{github.RUN_NUMBER}}
+            gilmaroassis/kubehello:${{github.RUN_NUMBER}}
           manifests: |
             k8s/deployment.yaml        
                   
